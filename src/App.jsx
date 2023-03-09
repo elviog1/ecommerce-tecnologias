@@ -1,11 +1,11 @@
-import ProductsPage from './pages/ProductsPage'
+import Home from './pages/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path='/productos' element={<ProductsPage />} />
+          <Route path='/' element={<Home />} />
         </Routes>
       </BrowserRouter>
   )
