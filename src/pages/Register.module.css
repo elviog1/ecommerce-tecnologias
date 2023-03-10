@@ -5,7 +5,7 @@
     margin: 0 auto;
 }
 .logo {
-    margin: 50px 0;
+    margin: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +87,6 @@
     outline: none;
 }
 
-
 .show {
     background-color: transparent;
     border-radius: 50%;
@@ -106,19 +105,23 @@
 
 .check {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 10px;
     align-items: center;
 }
 
 .check p {
-    font-weight: bold;
     font-size: 13px;
 }
 
-.remember {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.check span {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.check span:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .checkbox {
@@ -145,10 +148,13 @@
     border-radius: 8px;
 }
 
+.continuar:hover {
+    background-color: #383838;
+}
 
 .separador {
     display: flex;
-    margin: 50px 0;
+    margin: 30px 0;
     justify-content: space-between;
     align-items: center;
 }
@@ -164,7 +170,7 @@
 }
 
 .social {
-    margin-top: 100px;
+    margin-top: 30px;
     /* outline: 1px solid red; */
     display: flex;
     justify-content: space-evenly;
