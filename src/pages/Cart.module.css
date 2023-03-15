@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans";
+}
+
+.cart-side {
+  max-width: 400px;
+  height: 100vh;
+  margin: 0 0 0 auto;
+  box-shadow: 0 0 20px #ccc;
+}
+
+.cart-title {
+  margin: 0%;
+  padding-top: 5%;
+  padding-left: 5%;
+  font-size: 1.7rem;
+}
+.cart-content {
+  padding: 5%;
+  font-size: 12px;
+}
+
+.cart-item {
+  display: flex;
+  border-bottom: 1px solid black;
+  align-items: center;
+}
+
+.cart-item-img {
+  width: 120px;
+  height: 80px;
+  border-radius: 10%;
+  background-color: #ccc;
+}
+.cart-item-info {
+  padding-inline: 5%;
+  flex: 1;
+}
+
+.cart-prod-title {
+  font-weight: 700;
+}
+.cart-prod-price::before {
+  content: "$";
+}
+.cart-prod-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
