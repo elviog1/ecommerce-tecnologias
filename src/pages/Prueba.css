@@ -1,0 +1,155 @@
+* {
+  /* outline: 1px solid red; */
+}
+
+
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* ------------ Header -----------*/
+.header_nav {
+  display: flex;
+}
+
+/* Logo */
+
+.header_figure {
+  background-color: red;
+}
+
+.header_logo {
+ max-width: 60px;
+}
+
+/* List */
+.header_ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header_li {
+  background-color: red;
+  padding: 5px;
+}
+
+/* Input */
+.header_input {
+  border-radius: 5px;
+}
+
+
+/* ----------- Main ----------- */
+.main{
+  display: flex;
+}
+
+.list_span {
+  font-size: 39px;
+  font-weight: bold;
+  background-color: aquamarine;
+}
+
+/* ----------- Section 1 ---------- */
+.section {
+  width: 70%;
+  /* background-color: aqua; */
+}
+
+.section_article {
+
+  /* flex-wrap: wrap; */
+  display: flex;
+  background-color: brown;
+  margin: 10px 0 10px 0;
+}
+
+/* Section 1 -- block1*/
+.section_product {
+  width: 30%;
+  border-radius: 10px;
+}
+
+/* Section 1 -- block2*/
+.section_details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section_buttons {
+  display: flex;
+  background: green;
+  
+}
+
+.section_button {
+  max-width: 100%;
+  padding: 3px 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+  line-height: 14px;
+}
+/* Section 1 -- block3*/
+
+.section_button_trash {
+  width: 20%;
+}
+
+
+/* Aside */
+.aside {
+  width: 30%;
+  margin: 10px 0 10px 0;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aside_section{
+  display: flex;
+  flex-direction: column;
+  background-color: lightseagreen;
+  border-radius: 15px;
+  border: 1px solid;
+  align-items: center;
+  height: 260px;
+  justify-content: space-evenly;
+}
+
+.aside_span {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 25px;
+  margin: 20px 0;
+}
+
+.aside_subtotal {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 15px;
+}
+
+.aside_info {
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.button_pay {
+  height: 32px;
+  width: 220px;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+}
