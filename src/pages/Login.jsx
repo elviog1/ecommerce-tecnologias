@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import ph from '../../../../Imágenes/Emmeliel.jpg'
 import Google from '../svgComponents/Google'
 import Linkedin from '../svgComponents/Linkedin'
 import Facebook from '../svgComponents/Facebook'
