@@ -4,7 +4,9 @@ import Linkedin from '../svgComponents/Linkedin'
 import Facebook from '../svgComponents/Facebook'
 import x from './Register.module.css';
 import { BiHide, BiShowAlt } from "react-icons/bi";
+import { useNavigate } from 'react-router-dom';
 const Register = () => {
+    const navigate = useNavigate();
     const [showPass, setShowPass] = useState(false);
 
     const [user, setUser] = useState({
@@ -43,6 +45,8 @@ const Register = () => {
         })
 
     }
+
+
 
     return (
         <div className="h-screen grid grid-cols-2">
@@ -119,7 +123,7 @@ const Register = () => {
                     <li><Facebook /></li>
                     <li><Linkedin /></li>
                 </ul>
-                <p className={x.registro}>¿Ya tienes una cuenta? <span>Entrar</span></p>
+                <p className={x.registro}>¿Ya tienes una cuenta? <span onClick={() => navigate('/login')}>Entrar</span></p>
 
 
             </div>

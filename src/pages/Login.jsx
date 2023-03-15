@@ -3,10 +3,13 @@ import ph from '../../../../Imágenes/Emmeliel.jpg'
 import Google from '../svgComponents/Google'
 import Linkedin from '../svgComponents/Linkedin'
 import Facebook from '../svgComponents/Facebook'
+import {useNavigate} from 'react-router-dom'
 import x from './Login.module.css';
 import { BiHide, BiShowAlt } from "react-icons/bi";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [showPass, setShowPass] = useState(false);
 
   const [user, setUser] = useState({
@@ -41,7 +44,7 @@ const Login = () => {
       localStorage.setItem('token', e.token)
     });
     setUser({...user, username: '', password: ''});
-
+    navigate('/')
   }
 
   return (
@@ -104,7 +107,7 @@ const Login = () => {
             <li><Facebook /></li>
             <li><Linkedin /></li>
           </ul>
-          <p className={x.registro}>¿No tienes una cuenta? <span>Registrame</span></p>
+          <p className={x.registro}>¿No tienes una cuenta? <span onClick={() => navigate('/register')}>Registrame</span></p>
         </form>
 
       </div>
