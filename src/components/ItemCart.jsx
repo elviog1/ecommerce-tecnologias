@@ -1,25 +1,30 @@
 import React from "react";
 import x from "../pages/Cart.module.css";
+import Trash from "../svgComponents/Trash";
 
 const ItemCart = () => {
   return (
-    <div className={x["cart-item"]}>
+    <div className="flex border-b py-3">
       <img
-        className={x["cart-item-img"]}
+        className="w-[7rem] h-[4.5rem] rounded-2xl"
         src="https://blog.tiendasishop.com/wp-content/uploads/2022/07/productos-tecnologicos-2.webp"
         alt=""
       />
-      <div className={x["cart-item-info"]}>
-        <p className={x["cart-prod-title"]}>Lorem ipsum</p>
-        <p className={x["cart-prod-price"]}>0.00</p>
-        <div className={x["cart-prod-footer"]}>
-          <div className={x["footer-buttons"]}>
-            <button>-</button>
-            <span>0</span>
-            <button>+</button>
+      <div className="px-4 grow flex flex-col justify-between">
+        <p className="font-bold">Lorem ipsum</p>
+        <p>$0.00</p>
+        <div className="flex w-full justify-between items-center">
+          <div className="flex">
+            <button className="w-4 h-4 border border-black rounded-sm place-content: center">
+              -
+            </button>
+            <span className="px-1 ">0</span>
+            <button className="w-4 h-4 border border-black rounded-sm place-content: center">
+              +
+            </button>
           </div>
           <a href="#">
-            <img src="../svgComponents/trash.svg" alt="trash" />
+            <Trash />
           </a>
         </div>
       </div>

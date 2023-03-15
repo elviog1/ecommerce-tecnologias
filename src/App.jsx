@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
+      <Login />
       <Cart />
-      <div className="bg-red-200">S</div>
     </>
   );
 }
