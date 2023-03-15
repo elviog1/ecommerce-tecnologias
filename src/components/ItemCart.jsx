@@ -1,5 +1,4 @@
 import React from "react";
-import x from "../pages/Cart.module.css";
 import Trash from "../svgComponents/Trash";
 
 const ItemCart = () => {
