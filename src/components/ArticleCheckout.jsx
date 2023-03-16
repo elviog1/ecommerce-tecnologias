@@ -5,7 +5,7 @@ const ArticleCheckout = () => {
   return (
     <>
     <article className="section_article">
-    <img className="section_product" src="../../assets/logo.JPG" />
+    <img className="section_product" src="https://http2.mlstatic.com/D_NQ_NP_2X_659520-MLM51338788281_082022-F.webp" />
     <div className="section_details">
       <p className="section_detail section_parrafo ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.

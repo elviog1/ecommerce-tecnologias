@@ -8,7 +8,7 @@ function Header({ setToken }) {
   const listLI = [
     { name: "Favoritos", to: "/productos" },
     { name: "Categorias", to: "/productos" },
-    { name: "Ofertas", to: "/productos" },
+    { name: "Checkout", to: "/checkout" },
     { name: "Iniciar Sesion", to: "/productos" },
   ]
 
@@ -29,11 +29,11 @@ function Header({ setToken }) {
 
   return (
 
-    <div className='bg-[#d1d1d1]'>
+    <div className='bg-[#d1d1d1] sticky top-0'>
 
       <nav className=" max-w-6xl my-0 mx-auto flex justify-between items-center h-[60px] sticky top-0">
         <div className=" first-letter:text-gray-700 bg-gray-200 h-[48px] w-[193px] flex items-center justify-center">
-          <span>Ecommerce </span>
+          <span onClick={()=> navigate('/')}>Ecommerce </span>
         </div>
         <div className=" md:hidden flex items-center gap-4">
           <button
