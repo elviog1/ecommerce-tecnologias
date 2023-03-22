@@ -48,6 +48,7 @@ const Login = () => {
 
   return (
     <div className="h-screen grid grid-cols-2">
+    
       <div className={x.left_side}>
         <div className={x.logo}>
           <span>logo</span>
@@ -128,9 +129,11 @@ const Login = () => {
         </form>
       </div>
 
+
       <div className={x.right_side}>
         <p className={x.text}>Lorem Ipsum</p>
       </div>
+      
     </div>
   );
 };
