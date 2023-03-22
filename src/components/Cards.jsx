@@ -2,7 +2,7 @@ import React from 'react'
 import Categoria from './Categoria';
 
 const Cards = () => {
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,21];
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8];
     return (
         <div className='max-w-6xl my-0 mx-auto mt-[20px] flex justify-between'>
         
@@ -31,7 +31,7 @@ const Cards = () => {
             </div>
 
 
-            <div className='w-[900px] h-[2000px] flex flex-wrap justify-evenly'>
+            <div className='w-[900px] h-[max-content] flex flex-wrap justify-evenly'>
                 {
                     arr?.length > 0 ? arr.map((card, item) => {
                         return (

@@ -18,11 +18,6 @@ useEffect(()=> {
     <section className=''>
       <Header setToken={setToken}/>
       <FIltroSuperior/>
-      {/* <div className='h-screen flex justify-center items-center'>
-        <div>
-        <h1>{token ? 'Sesion Iniciada' : 'Sin Sesion'}</h1>
-        </div>
-      </div> */}
       <Cards/>
     </section>
   )
