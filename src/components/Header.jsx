@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { BsMinecartLoaded } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
-import Cart from '../pages/Cart';
-
+import Cart from "../pages/Cart";
 
 function Header({ setToken }) {
   const navigate = useNavigate();
@@ -14,91 +13,94 @@ function Header({ setToken }) {
     { name: "Categorias", to: "/productos" },
     { name: "Checkout", to: "/checkout" },
     { name: "Iniciar Sesion", to: "/productos" },
-  ]
+  ];
 
   const handleMenuClick = () => {
     setIsOpen(!isOpen);
   };
 
   const logInOrOut = () => {
-    let token = localStorage.getItem('token');
+    let token = localStorage.getItem("token");
     if (!token) {
-      navigate('/login');
-      return
+      navigate("/login");
+      return;
     }
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     setToken(false);
-  }
-
+  };
 
   return (
     <>
-  {
-    cart && <Cart/>
-  }
+      {cart && <Cart />}
 
-
-    <div className='bg-white sticky top-0 '>
-
-      <nav className=" max-w-6xl my-0 mx-auto flex justify-between items-center h-[60px] sticky top-0">
-        <div className=" first-letter:text-gray-700 bg-gray-200 h-[48px] w-[193px] flex items-center justify-center">
-          <span onClick={()=> navigate('/')}>Ecommerce </span>
-        </div>
-        <div className=" md:hidden flex items-center gap-4">
-          <button
-            onClick={handleMenuClick}
-            className="flex items-center px-3 py-2 border rounded "
+      <div className="bg-white sticky top-0 z-100">
+        <nav className=" bg-white max-w-6xl my-0 mx-auto flex justify-between items-center h-[60px] sticky top-0">
+          <div className=" first-letter:text-gray-700 bg-gray-200 h-[48px] w-[193px] flex items-center justify-center">
+            <span onClick={() => navigate("/")}>Ecommerce </span>
+          </div>
+          <div className=" md:hidden flex items-center gap-4">
+            <button
+              onClick={handleMenuClick}
+              className="flex items-center px-3 py-2 border rounded "
             >
-            <svg
-              className="h-3 w-3"
-              fill="none"
-              viewBox="0 0 12 12"
-              stroke="currentColor"
+              <svg
+                className="h-3 w-3"
+                fill="none"
+                viewBox="0 0 12 12"
+                stroke="currentColor"
               >
-              {!isOpen ? (
-                <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 4h6M3 8h6"
-                />
+                {!isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 4h6M3 8h6"
+                  />
                 ) : (
                   <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4.5 4.5l3 3M7.5 4.5l-3 3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.5 4.5l3 3M7.5 4.5l-3 3"
                   />
-                  )}
-            </svg>
-          </button>
-        </div>
-     
-          <div 
-               className={`${
-                 isOpen ? '' : 'hidden'
-                } w-full block flex-grow md:flex md:items-center md:w-auto justify-end`}
-                >
-            <ul className='flex items-center justify-center gap-3'>
+                )}
+              </svg>
+            </button>
+          </div>
+
+          <div
+            className={`${
+              isOpen ? "" : "hidden"
+            } w-full block flex-grow md:flex md:items-center md:w-auto justify-end`}
+          >
+            <ul className="flex items-center justify-center gap-3">
               {listLI.map((link, index) => (
-                <li key={index} className=''>
-                  <Link to={link.to} >{link.name}</Link>
+                <li key={index} className="">
+                  <Link to={link.to}>{link.name}</Link>
                 </li>
               ))}
-              <li onClick={()=> setCart(!cart)}>Cart</li>
-              <FaUser onClick={() => logInOrOut()} className='hover:scale-[1.2] cursor-pointer'/>
+              <li onClick={() => setCart(!cart)}>Cart</li>
+              <FaUser
+                onClick={() => logInOrOut()}
+                className="hover:scale-[1.2] cursor-pointer"
+              />
               <BsMinecartLoaded />
-              <div className={` ${localStorage.getItem('token') ? 'opacity-100 visible' : 'opacity-0 invisible w-0 h-0'} hover:cursor-pointer bg-green-200 w-[40px] h-[40px] rounded-[50%] border-[2px] border-solid border-indigo-500 flex items-center justify-center`}>
-                <div className='w-[30px] h-[30px]  rounded-[50%]  border-[2px] border-solid border-green-600 flex items-center justify-center'>
-                  <span className='font-bold text-purple-800'>M</span>
+              <div
+                className={` ${
+                  localStorage.getItem("token")
+                    ? "opacity-100 visible"
+                    : "opacity-0 invisible w-0 h-0"
+                } hover:cursor-pointer bg-green-200 w-[40px] h-[40px] rounded-[50%] border-[2px] border-solid border-indigo-500 flex items-center justify-center`}
+              >
+                <div className="w-[30px] h-[30px]  rounded-[50%]  border-[2px] border-solid border-green-600 flex items-center justify-center">
+                  <span className="font-bold text-purple-800">M</span>
                 </div>
               </div>
             </ul>
           </div>
-
-      </nav>
-    </div>
-              </>
+        </nav>
+      </div>
+    </>
   );
 }
 
