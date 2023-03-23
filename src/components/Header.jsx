@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BsMinecartLoaded } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
 import Cart from "../pages/Cart";
+import Searching from "./Searching";
 
 function Header({ setToken }) {
   const navigate = useNavigate();
@@ -33,11 +34,22 @@ function Header({ setToken }) {
     <>
       {cart && <Cart />}
 
-      <div className="bg-white sticky top-0 z-100">
-        <nav className=" bg-white max-w-6xl my-0 mx-auto flex justify-between items-center h-[60px] sticky top-0">
-          <div className=" first-letter:text-gray-700 bg-gray-200 h-[48px] w-[193px] flex items-center justify-center">
-            <span onClick={() => navigate("/")}>Ecommerce </span>
+      <div className="sticky top-0 bg-white z-10">
+        <nav className=" max-w-6xl my-0 mx-auto flex justify-between items-center h-[60px] sticky top-0">
+          <div className=" first-letter:text-gray-700 bg-gray-200 h-[48px] px-[20px] flex items-center justify-center">
+            <span onClick={() => navigate("/")}>Logo </span>
           </div>
+
+          <ul className="flex ml-4 space-x-6">
+            <li>Inicio</li>
+            <li>Laptops</li>
+            <li>PCs de Escritorio</li>
+            <li>Tablets</li>
+            <li>Accesorios</li>
+            <li>FAQS</li>
+          </ul>
+
+          {/*
           <div className=" md:hidden flex items-center gap-4">
             <button
               onClick={handleMenuClick}
@@ -66,36 +78,20 @@ function Header({ setToken }) {
                 )}
               </svg>
             </button>
-          </div>
+          </div> */}
 
           <div
             className={`${
               isOpen ? "" : "hidden"
-            } w-full block flex-grow md:flex md:items-center md:w-auto justify-end`}
+            } w-full block flex-grow md:flex md:items-center md:w-auto justify-end space-x-8`}
           >
-            <ul className="flex items-center justify-center gap-3">
-              {listLI.map((link, index) => (
-                <li key={index} className="">
-                  <Link to={link.to}>{link.name}</Link>
-                </li>
-              ))}
-              <li onClick={() => setCart(!cart)}>Cart</li>
+            <Searching />
+            <ul className="flex items-center justify-center gap-[20px]">
+              <BsMinecartLoaded />
               <FaUser
                 onClick={() => logInOrOut()}
                 className="hover:scale-[1.2] cursor-pointer"
               />
-              <BsMinecartLoaded />
-              <div
-                className={` ${
-                  localStorage.getItem("token")
-                    ? "opacity-100 visible"
-                    : "opacity-0 invisible w-0 h-0"
-                } hover:cursor-pointer bg-green-200 w-[40px] h-[40px] rounded-[50%] border-[2px] border-solid border-indigo-500 flex items-center justify-center`}
-              >
-                <div className="w-[30px] h-[30px]  rounded-[50%]  border-[2px] border-solid border-green-600 flex items-center justify-center">
-                  <span className="font-bold text-purple-800">M</span>
-                </div>
-              </div>
             </ul>
           </div>
         </nav>

@@ -3,7 +3,10 @@ import Categoria from "./Categoria";
 import Card from "./Card";
 
 const Cards = () => {
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+  let arr = [
+    1, 2, 3, 4, 5, 6, 7, 8, 1, 123, 12, 2, 2, 3, 3, 45, 5, 4, 1, 3, 45, 1, 1,
+    23, 4, 45,
+  ];
   return (
     <div className="max-w-6xl my-0 mx-auto mt-[20px] flex justify-between">
       <div className="bg-white w-[250px] h-max">
