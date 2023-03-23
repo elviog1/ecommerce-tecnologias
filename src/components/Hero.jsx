@@ -45,7 +45,7 @@ const Hero = () => {
             >
                 
 
-                <div className='flex flex-nowrap w-full h-full bg-red-100 '
+                <div className='flex flex-nowrap w-full h-full bg-red-800 '
                 ref={slideCarrusel}
                 >
                     {
