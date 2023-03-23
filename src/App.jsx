@@ -4,6 +4,9 @@ import Register from './pages/Register';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
+import Header from './components/Header';
+import Searching from './components/Searching';
+import Hero from './components/Hero';
 
 function App() {
   return (
