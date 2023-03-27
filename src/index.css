@@ -3,7 +3,7 @@
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;  
 
 * {
   margin: 0;
@@ -12,8 +12,3 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.img-size {
-  object-fit: fill;
-  width: 100%;
-  height: 100%;
-}
