@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react'
-import hero from '../../../heroexample.jpg'
 import '../index.css'
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { images } from '../helpers/imagenes'

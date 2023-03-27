@@ -27,7 +27,6 @@ function Cart() {
         <ItemCart />
         <ItemCart />
         <ItemCart />
-        <ItemCart />
       </div>
     </div>
   );
