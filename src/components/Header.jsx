@@ -100,7 +100,10 @@ function Header({ setToken }) {
           >
             <Searching/>
             <ul className='flex items-center justify-center gap-[20px]'>
-              <BsMinecartLoaded />
+              <div onClick={ () => navigate('/checkout')}>
+                <BsMinecartLoaded/>
+              </div>
+                
               <FaUser onClick={() => logInOrOut()} className='hover:scale-[1.2] cursor-pointer' />
             </ul>
           </div>
