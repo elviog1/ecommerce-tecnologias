@@ -7,12 +7,15 @@ import Cart from './pages/Cart';
 import Header from './components/Header';
 import Searching from './components/Searching';
 import Hero from './components/Hero';
+import PopUpPrivacyPolicy from './components/PopUpPrivacyPolicy';
+import AsideCheckout from './components/AsideCheckout';
+import ArticleCheckout from './components/ArticleCheckout';
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home/>} />
+          <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register/>} />
           <Route path='/checkout' element={<Checkout/>} />

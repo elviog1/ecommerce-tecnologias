@@ -85,13 +85,13 @@ const Login = () => {
                   value={user.password}
                   name="password"
                 />
-                <div className={x.show} onClick={() => setShowPass(!showPass)}>
+                <button className={x.show} onClick={() => setShowPass(!showPass)}>
                   {user.password < 1 ? null : showPass ? (
                     <BiShowAlt size={25} />
                   ) : (
                     <BiHide size={25} />
                   )}
-                </div>
+                </button>
               </div>
             </div>
 

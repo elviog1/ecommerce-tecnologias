@@ -3,12 +3,19 @@ import Google from '../svgComponents/Google'
 import Linkedin from '../svgComponents/Linkedin'
 import Facebook from '../svgComponents/Facebook'
 import x from './Register.module.css';
+import PopUpPrivacyPolicy from '../components/PopUpPrivacyPolicy';
 import { BiHide, BiShowAlt } from "react-icons/bi";
 import { useNavigate } from 'react-router-dom';
 const Register = () => {
     const navigate = useNavigate();
     const [showPass, setShowPass] = useState(false);
 
+    // Politicas de Privacidad
+    const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
+    // Terminos y condiciones
+    const [showTermsAndConditions,setShowTermsAndConditions] = useState(false);
+    
+    
     const [user, setUser] = useState({
         name: '',
         surname: '',
@@ -58,7 +65,7 @@ const Register = () => {
 
                 <div className={x.wel}>
                     <p>Crear una cuenta</p>
-                    <h5>Registrate para comprar productos</h5>
+                    {/* <h5>Registrate para comprar productos</h5> */}
                 </div>
 
                 <form onSubmit={(e) => handleFetch(e)}>
@@ -105,7 +112,7 @@ const Register = () => {
 
                         <div className={x.check}>
                             <div className={x.checkbox}><input type='checkbox' /></div>
-                            <p>Acepto los <span>terminos de servicio</span> y <span>politica de privacidad</span></p>
+                            <p>Acepto los <span  onClick={() => setShowTermsAndConditions(true)}>terminos de servicio</span> y <span onClick={() => setShowPrivacyPolicy(true)}>politica de privacidad</span></p>
                         </div>
 
                         <button className={x.continuar}>Registrarme</button>
@@ -125,13 +132,22 @@ const Register = () => {
                 </ul>
                 <p className={x.registro}>¿Ya tienes una cuenta? <span onClick={() => navigate('/login')}>Entrar</span></p>
 
-
             </div>
 
             <div className={x.right_side}>
                 <p className={x.text}>Lorem Ipsum</p>
 
             </div>
+
+
+            {
+                showPrivacyPolicy ? <PopUpPrivacyPolicy setShow={setShowPrivacyPolicy} title='Politica de Privacidad' content='Esto es una prueba del componente de las politicas de privacidad' /> : null
+            }
+
+            {
+                showTermsAndConditions ? <PopUpPrivacyPolicy setShow={setShowTermsAndConditions} title='Terminos y condiciones' content='Esto es una prueba del componente para los terminos y condiciones de la pagina web' /> : null
+            }
+
         </div>
     )
 }
