@@ -13,7 +13,7 @@ function Header({ setToken }) {
     { name: "Favoritos", to: "/productos" },
     { name: "Categorias", to: "/productos" },
     { name: "Checkout", to: "/checkout" },
-    { name: "Iniciar Sesion", to: "/productos" },
+    { name: "Iniciar Sesion", to: "/category" },
   ];
 
   const handleMenuClick = () => {

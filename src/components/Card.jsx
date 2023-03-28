@@ -3,15 +3,23 @@ import Star from "../svgComponents/Star";
 import IconCart from "../svgComponents/Cart";
 import Favorite from "../svgComponents/Favorite";
 
-const Card = () => {
+const Card = (props) => {
   return (
-    <div className="w-[210px] h-[330px] shadow-md m-1 flex flex-col  justify-center px-3 py-3">
+    <div className="w-[210px] h-[330px] shadow-md m-1 flex flex-col  justify-center px-3 py-3 bg-white">
       <div className="flex justify-center mb-3 relative">
         <img
           className="h-28"
           src="https://i5.walmartimages.com/asr/32d517e5-1f0c-4116-a6eb-256f127b3944.60cd0a8add9b6bc677faaeb8954befe5.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
           alt="Image Product Card"
         />
+
+        <div
+          className={`${
+            props.desc ? "" : "hidden"
+          } absolute left-0 bg-slate-600 text-white text-xs px-2 py-1 rounded-md`}
+        >
+          15%
+        </div>
         <a href="" className="absolute right-0">
           <Favorite />
         </a>
