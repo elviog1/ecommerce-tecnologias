@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/AsideCheckout.css";
 import ProtectedBuy from "../svgComponents/ProtectedBuy"
 
 const AsideCheckout = () => {

@@ -1,9 +1,9 @@
 import "./Checkout2.css";
-import AsideCheckout from "../components/AsideCheckout";
-import Header from "../components/Header";
-import CheckoutSteps from "../components/CheckoutSteps";
-import DiscountHeader from "../components/DiscountHeader";
-import Footer from "../components/Footer";
+import AsideCheckout from "../../components/AsideCheckout";
+import Header from "../../components/Header";
+import CheckoutSteps from "../../components/CheckoutSteps";
+import DiscountHeader from "../../components/DiscountHeader";
+import Footer from "../../components/Footer";
 
 function Checkout2() {
   let arreglo = [1, 2];

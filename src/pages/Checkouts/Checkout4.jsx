@@ -1,10 +1,10 @@
 import "./Checkout4.css";
-import AsideCheckout from "../components/AsideCheckout";
-import Header from "../components/Header";
-import CheckoutSteps from "../components/CheckoutSteps";
-import DiscountHeader from "../components/DiscountHeader";
-import Footer from "../components/Footer";
-import { tarjetas } from "../helpers/tarjetas.js";
+import AsideCheckout from "../../components/AsideCheckout";
+import Header from "../../components/Header";
+import CheckoutSteps from "../../components/CheckoutSteps";
+import DiscountHeader from "../../components/DiscountHeader";
+import Footer from "../../components/Footer";
+import { tarjetas } from "../../helpers/tarjetas.js";
 
 function Checkout4() {
   return (
@@ -20,9 +20,7 @@ function Checkout4() {
             <form className="form4">
               <fieldset className="form4_fieldset1">
                 {tarjetas.map((item) => {
-                  return (
-                    <img src={item} width="100px" height="30px" />
-                  )
+                  return <img src={item} width="100px" height="30px" />;
                 })}
               </fieldset>
 

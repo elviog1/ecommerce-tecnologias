@@ -2,7 +2,7 @@ import "./Checkout.css";
 import AsideCheckout from "../components/AsideCheckout";
 import ArticleCheckout from "../components/ArticleCheckout";
 import Header from "../components/Header";
-import CheckoutSteps from "../components/CheckoutSteps";
+// import CheckoutSteps from "../components/CheckoutSteps";
 import DiscountHeader from "../components/DiscountHeader";
 import Footer from "../components/Footer";
 
@@ -15,7 +15,7 @@ function Checkout() {
       <DiscountHeader />
       <Header />
       <div className="main-container">
-      <CheckoutSteps />
+      {/* <CheckoutSteps /> */}
         <p className="title_list">Lista de Carrito de compras</p>
         <div className="container">
           <main className="main">
